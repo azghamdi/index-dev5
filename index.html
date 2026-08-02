@@ -12298,8 +12298,10 @@ input.addEventListener('focus',expand);panel.addEventListener('pointerdown',expa
   ];
 
   const href = (topic, sub) =>
-    'topics.html?topic=' + encodeURIComponent(topic) +
-    '&subtopic=' + encodeURIComponent(sub);
+    sub === 'أسعار العقارات'
+      ? 'https://azghamdi.github.io/gastat-publication/'
+      : 'topics.html?topic=' + encodeURIComponent(topic) +
+        '&subtopic=' + encodeURIComponent(sub);
 
   const translate = root => {
     const english = document.documentElement.lang === 'en';
